@@ -1,0 +1,81 @@
+Question,score if yes,score if no
+"Do you drink alcohol?",-0.4,0.4
+"Do you smoke cigarettes or tobacco?",-0.8,0.8
+"Do you exercise regularly?",0.8,-0.8
+"Do you maintain a regular sleep schedule?",0.6,-0.6
+"Do you frequently stay up very late without necessity?",-0.5,0.5
+"Do you eat a balanced diet?",0.7,-0.7
+"Do you frequently eat junk food?",-0.5,0.5
+"Do you drink enough water every day?",0.5,-0.5
+"Do you procrastinate important tasks?",-0.7,0.7
+"Do you complete tasks before their deadlines?",0.8,-0.8
+"Do you maintain a daily routine?",0.6,-0.6
+"Do you frequently arrive late to appointments?",-0.6,0.6
+"Do you keep your promises?",0.9,-0.9
+"Do you lie to avoid responsibility?",-0.8,0.8
+"Do you admit your mistakes?",0.9,-0.9
+"Do you blame others for your mistakes?",-0.8,0.8
+"Do you apologize when you hurt someone?",0.8,-0.8
+"Do you hold grudges for a long time?",-0.5,0.5
+"Do you forgive people who genuinely apologize?",0.7,-0.7
+"Do you intentionally manipulate people to get what you want?",-1.0,1.0
+"Do you help people without expecting something in return?",0.9,-0.9
+"Do you make fun of people because of their weaknesses?",-0.8,0.8
+"Do you respect people with opinions different from yours?",0.8,-0.8
+"Do you frequently judge people based on their appearance?",-0.6,0.6
+"Do you gossip about your friends or colleagues?",-0.5,0.5
+"Do you keep other people's secrets?",0.8,-0.8
+"Do you interrupt people while they are speaking?",-0.4,0.4
+"Do you actively listen when someone talks to you?",0.7,-0.7
+"Do you express gratitude when someone helps you?",0.6,-0.6
+"Do you frequently compare yourself with others?",-0.4,0.4
+"Do you celebrate other people's achievements?",0.7,-0.7
+"Do you become jealous when someone close to you succeeds?",-0.5,0.5
+"Do you respect personal boundaries?",0.9,-0.9
+"Do you invade other people's privacy?",-0.8,0.8
+"Do you check your partner's phone without permission?",-0.9,0.9
+"Do you communicate openly when you have a problem with someone?",0.8,-0.8
+"Do you avoid difficult conversations even when necessary?",-0.4,0.4
+"Do you lose your temper easily?",-0.7,0.7
+"Do you think before reacting when you are angry?",0.8,-0.8
+"Do you intentionally hurt people during arguments?",-0.9,0.9
+"Do you accept constructive criticism?",0.8,-0.8
+"Do you become defensive when someone criticizes you?",-0.5,0.5
+"Do you actively try to improve yourself?",0.9,-0.9
+"Do you give up easily when something becomes difficult?",-0.6,0.6
+"Do you learn from your past mistakes?",0.8,-0.8
+"Do you make decisions impulsively without considering consequences?",-0.6,0.6
+"Do you think about the consequences of your actions?",0.8,-0.8
+"Do you keep track of your spending?",0.5,-0.5
+"Do you frequently spend money impulsively?",-0.5,0.5
+"Do you regularly save a portion of your income?",0.7,-0.7
+"Do you borrow money without making an effort to repay it?",-0.9,0.9
+"Do you respect other people's time?",0.7,-0.7
+"Do you frequently cancel plans at the last minute?",-0.4,0.4
+"Do you take responsibility for your commitments?",0.8,-0.8
+"Do you treat service workers respectfully?",0.9,-0.9
+"Are you rude to people when you believe they are less important than you?",-1.0,1.0
+"Do you offer help when you see someone genuinely struggling?",0.8,-0.8
+"Do you volunteer your time for social causes?",0.5,-0.5
+"Do you respect animals and treat them kindly?",0.7,-0.7
+"Do you intentionally damage public property?",-0.8,0.8
+"Do you follow rules even when nobody is watching?",0.8,-0.8
+"Do you cheat when you believe you will not get caught?",-1.0,1.0
+"Do you take credit for someone else's work?",-0.9,0.9
+"Do you acknowledge other people's contributions?",0.8,-0.8
+"Do you respect commitments made to your friends?",0.7,-0.7
+"Do you intentionally exclude people from a group?",-0.5,0.5
+"Do you try to make new people feel welcome?",0.6,-0.6
+"Do you enjoy helping your friends achieve their goals?",0.7,-0.7
+"Do you use someone's personal information against them?",-1.0,1.0
+"Do you respect someone's no without pressuring them?",1.0,-1.0
+"Do you frequently seek attention from others?",-0.3,0.3
+"Do you need constant validation from other people?",-0.3,0.3
+"Can you be happy for someone without receiving recognition yourself?",0.8,-0.8
+"Do you stay calm when plans suddenly change?",0.6,-0.6
+"Do you frequently overreact to small problems?",-0.5,0.5
+"Do you treat people differently based on their social status?",-0.8,0.8
+"Do you give people a second chance after genuine mistakes?",0.6,-0.6
+"Do you deliberately create conflicts between people?",-0.9,0.9
+"Do you encourage people around you to grow?",0.8,-0.8
+"Do you genuinely care about the wellbeing of people close to you?",0.9,-0.9
