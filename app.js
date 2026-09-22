@@ -6,6 +6,7 @@ window.FlagLens.state = {
   currentIndex: 0,
   totalScore: 0,
   badAnswers: [],
+  userName: "",
   friendName: "",
   questionsLoaded: false
 };
@@ -23,7 +24,13 @@ window.FlagLens.App = {
 
   startQuiz: function startQuiz() {
     const ui = window.FlagLens.UI.ui;
+    const userName = ui.userNameInput.value.trim();
     const name = ui.friendNameInput.value.trim();
+
+    if (!userName) {
+      ui.userNameInput.focus();
+      return;
+    }
     if (!name) {
       ui.friendNameInput.focus();
       return;
@@ -33,6 +40,7 @@ window.FlagLens.App = {
       return;
     }
 
+    window.FlagLens.state.userName = userName;
     window.FlagLens.state.friendName = name;
     window.FlagLens.state.selectedQuestions = window.FlagLens.SCORING.shuffle(window.FlagLens.state.allQuestions).slice(0, Math.min(window.FlagLens.DATA.CONFIG.questionsPerTest, window.FlagLens.state.allQuestions.length));
     window.FlagLens.state.currentIndex = 0;
@@ -105,6 +113,24 @@ window.FlagLens.App = {
       color,
       improvements
     );
+
+    const flagStatus = score >= 0 ? "green" : "red";
+    window.FlagLens.App.saveResult(score, flagStatus);
+  },
+
+  saveResult: function saveResult(score, flagStatus) {
+    fetch("/api/save-result", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userName: window.FlagLens.state.userName,
+        friendName: window.FlagLens.state.friendName,
+        score: Number(score.toFixed(2)),
+        flagStatus
+      })
+    }).catch(error => {
+      console.warn("Could not save result to database:", error);
+    });
   },
 
   loadQuestions: async function loadQuestions() {
@@ -141,6 +167,11 @@ window.FlagLens.App = {
   bindEvents: function bindEvents() {
     const ui = window.FlagLens.UI.ui;
     ui.btnStart.addEventListener("click", window.FlagLens.App.startQuiz);
+    ui.userNameInput.addEventListener("keydown", event => {
+      if (event.key === "Enter") {
+        ui.friendNameInput.focus();
+      }
+    });
     ui.friendNameInput.addEventListener("keydown", event => {
       if (event.key === "Enter") {
         ui.btnStart.click();

@@ -5,6 +5,7 @@ window.FlagLens.UI.ui = {};
 window.FlagLens.UI.cacheDom = function cacheDom() {
   const ui = window.FlagLens.UI.ui;
   ui.btnStart = document.getElementById("btn-start");
+  ui.userNameInput = document.getElementById("user-name-input");
   ui.friendNameInput = document.getElementById("friend-name-input");
   ui.loadStatus = document.getElementById("load-status");
   ui.friendDisplay = document.getElementById("friend-display");
