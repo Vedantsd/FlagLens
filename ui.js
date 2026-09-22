@@ -22,7 +22,9 @@ window.FlagLens.UI.cacheDom = function cacheDom() {
   ui.resultVerdict = document.getElementById("result-verdict");
   ui.resultDesc = document.getElementById("result-desc");
   ui.suggestionsList = document.getElementById("suggestions-list");
-  ui.cardName = document.getElementById("card-name");
+  ui.cardFromName = document.getElementById("card-from-name");
+  ui.cardToName = document.getElementById("card-to-name");
+  ui.cardSeal = document.getElementById("card-seal");
   ui.cardTopBar = document.getElementById("card-top-bar");
   ui.cardBadge = document.getElementById("card-badge");
   ui.cardScoreChip = document.getElementById("card-score-chip");
@@ -76,10 +78,12 @@ window.FlagLens.UI.renderSuggestionsList = function renderSuggestionsList(improv
   });
 };
 
-window.FlagLens.UI.buildCard = function buildCard(friendName, score, verdict, color, improvements) {
+window.FlagLens.UI.buildCard = function buildCard(userName, friendName, score, verdict, color, improvements) {
   const ui = window.FlagLens.UI.ui;
-  ui.cardName.textContent = friendName;
+  ui.cardFromName.textContent = userName;
+  ui.cardToName.textContent = friendName;
   ui.cardTopBar.style.background = `linear-gradient(90deg, ${color}, transparent)`;
+  ui.cardSeal.style.background = color;
   ui.cardBadge.textContent = verdict;
 
   const isRed = score < -0.1;
@@ -121,12 +125,12 @@ window.FlagLens.UI.buildCard = function buildCard(friendName, score, verdict, co
   });
 };
 
-window.FlagLens.UI.updateResultUI = function updateResultUI(friendName, score, verdict, description, color, improvements) {
+window.FlagLens.UI.updateResultUI = function updateResultUI(userName, friendName, score, verdict, description, color, improvements) {
   const ui = window.FlagLens.UI.ui;
   ui.resultNameLabel.textContent = friendName;
   ui.resultVerdict.textContent = verdict;
   ui.resultVerdict.style.color = color;
   ui.resultDesc.textContent = description;
   window.FlagLens.UI.renderSuggestionsList(improvements);
-  window.FlagLens.UI.buildCard(friendName, score, verdict, color, improvements);
+  window.FlagLens.UI.buildCard(userName, friendName, score, verdict, color, improvements);
 };

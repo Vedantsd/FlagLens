@@ -106,6 +106,7 @@ window.FlagLens.App = {
     }, 200);
 
     window.FlagLens.UI.updateResultUI(
+      window.FlagLens.state.userName,
       window.FlagLens.state.friendName,
       score,
       verdictData.verdict,
@@ -189,7 +190,9 @@ window.FlagLens.App = {
         logging: false
       }).then(canvas => {
         const link = document.createElement("a");
-        link.download = `flaglens-${window.FlagLens.state.friendName.replace(/\s+/g, "-").toLowerCase()}.png`;
+        const fromSlug = window.FlagLens.state.userName.replace(/\s+/g, "-").toLowerCase();
+        const toSlug = window.FlagLens.state.friendName.replace(/\s+/g, "-").toLowerCase();
+        link.download = `flaglens-${fromSlug}-to-${toSlug}.png`;
         link.href = canvas.toDataURL("image/png");
         link.click();
       });

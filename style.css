@@ -429,12 +429,57 @@
     margin-bottom: 6px;
   }
 
-  .card-friend-name {
-    font-size: 30px;
+  .card-postcard {
+    position: relative;
+    display: flex;
+    border: 1px dashed #1f3050;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 24px;
+  }
+
+  .card-postcard-field {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .card-postcard-field + .card-postcard-field {
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 1px dashed #1f3050;
+    text-align: right;
+  }
+
+  .card-postcard-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: #4a6070;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .card-postcard-value {
+    font-size: 19px;
     font-weight: 700;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.4px;
     color: #eef1f5;
-    margin-bottom: 4px;
+    overflow-wrap: break-word;
+  }
+
+  .card-seal {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-4deg);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #0d1520;
+    background: #3a7bd5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .card-verdict-row {
@@ -442,7 +487,6 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 28px;
-    margin-top: 14px;
   }
 
   .card-verdict-badge {
